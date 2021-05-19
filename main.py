@@ -19,13 +19,15 @@ import time
 
 按键种类：
 interval：魔法辅助技能键，间隔一定时间按一次
-always：一直按着不放开的键，中间有少量的间暂停
-combination：组合技能，一组按键按照一定顺序和间隔时间的模拟按下
+combination：组合技能，一组按键按照一定顺序和间隔时间的模拟按下(每个技能键只按一次)
+always：一直按着不放开的键，中间可以有少量的时间暂停
+当'key_type'=always 是 会多处一个时间参数"t1",具体看先边的解释
 
-"key_switch": Key.ctrl,#开关控制键，负责控制模拟这个技能键的开关
-"key": 'b',#模拟的技能键
-"is_start": 0,#开关，确定当前技能键在程序开启时，默认是关闭的，一般为0及可
+"key_switch": Key.ctrl,#开关控制键，负责控制模拟这个技能键的开关，按下ctrl才会启动按年模拟，再次按下ctrl模拟暂停
+"key": 'b',#需要模拟按下的技能键
+"is_start": 0,#开关，确定当前技能键在程序开启时，默认是关闭的，一般为0及可。
 "t": 0.5,#当前按键模拟按下离开的间隔时间，以秒为单位
+"t1": 5, #当'key_type'=always此属性有效，表示为按键一直按着不松开5秒。
 
 '''
 ##################################################################
@@ -50,21 +52,21 @@ keyList = [
     },
     {
         "key_type": "combination",
-        "key_switch": 'alt',
+        "key_switch": 'shift_r',
         "key": 'd',
         "is_start": 0,
         "t": 0.1,
     },
     {
         "key_type": "combination",
-        "key_switch": 'alt',
+        "key_switch": 'shift_r',
         "key": 'f',
         "is_start": 0,
         "t": 1,
     },
     {
         "key_type": "combination",
-        "key_switch": 'alt',
+        "key_switch": 'shift',
         "key": 'e',
         "is_start": 0,
         "t": 2,
@@ -126,9 +128,12 @@ PYBF_KEY = [
     'Z',
 ]
 PYBF_OTHER_KEYS = {
-    "ctrl":Key.ctrl,
-    "shift":Key.shift,
-    "alt":Key.alt,
+    "ctrl":Key.ctrl_l,
+    "shift":Key.shift_l,
+    "alt":Key.alt_l,
+    "ctrl_r":Key.ctrl_r,
+    "shift_r":Key.shift_r,
+    "alt_r":Key.alt_r,
     "caps_lock":Key.caps_lock,
     "tab":Key.tab,
     "esc":Key.esc,
