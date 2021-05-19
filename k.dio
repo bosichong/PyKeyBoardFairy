@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="KI-nzS536QmDJo09lPVf" name="第 1 页">
-        <mxGraphModel dx="580" dy="479" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1201" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -30,6 +30,9 @@
                 <mxCell id="10" value="程序启动" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="240" y="240" width="160" height="40" as="geometry"/>
                 </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="14" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="14" value="分配按键线程，等待启动命令" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="120" y="320" width="160" height="40" as="geometry"/>
                 </mxCell>
@@ -39,7 +42,7 @@
                 <mxCell id="16" value="键盘监听线程，监听启动命令" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="360" y="320" width="160" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="按键运作启动或是暂停" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="18" value="按键运行启动或是暂停" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="240" y="400" width="160" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="20" value="程序退出，释放线程。" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
