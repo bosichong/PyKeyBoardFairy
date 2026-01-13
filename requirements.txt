@@ -1,0 +1,4 @@
+# PyKeyBoardFairy 依赖包
+
+# 键盘监听和模拟核心库
+pynput>=1.7.3
